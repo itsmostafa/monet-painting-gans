@@ -5,5 +5,9 @@ description = "A supervised Learning problem to perform EDA and model analysis"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "ipykernel>=6.30.1",
+    "matplotlib>=3.10.7",
     "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
 ]
