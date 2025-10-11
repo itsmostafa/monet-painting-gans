@@ -4,4 +4,6 @@ version = "0.1.0"
 description = "A supervised Learning problem to perform EDA and model analysis"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "pandas>=2.3.3",
+]

@@ -1,1 +1,8 @@
-.venv
+# MacOS
+.DS_Store
+
+# Python
+__pycache__/
+
+# Virtual environment
+.venv/
