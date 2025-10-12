@@ -57,5 +57,5 @@ ruff check .
 
 #### AI Citation
 
-"Fix any grammatical issues with the following assignment." prompt. ChatGPT, GPT 5, OpenAI, October 11th, 2025 chat.openai.com/chat
-"Summarize the analysis results in the given jupyter notebook." prompt. ChatGPT, GPT 5, OpenAI, October 11th, 2025 chat.openai.com/chat
+- "Fix any grammatical issues with the following assignment." prompt. ChatGPT, GPT 5, OpenAI, October 11th, 2025 chat.openai.com/chat
+- "Summarize the analysis results in the given jupyter notebook." prompt. ChatGPT, GPT 5, OpenAI, October 11th, 2025 chat.openai.com/chat
