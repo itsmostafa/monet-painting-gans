@@ -1,20 +1,55 @@
 # Histopathologic Cancer Detection
 
-This Kaggle competition is a binary image classification problem where you will identify metastatic cancer in small image patches taken from larger digital pathology scans.
+Binary image classification to detect metastatic cancer in histopathologic scans of lymph node sections.
 
-You will submit three deliverables: 
+**Kaggle Competition**: https://www.kaggle.com/c/histopathologic-cancer-detection/
 
-Deliverable 1 — A Jupyter notebook with a description of the problem/data, exploratory data analysis (EDA) procedure, analysis (model building and training), result, and discussion/conclusion. 
+## Dataset
 
-If your project doesn’t fit into Jupyter notebook format (E.g., you built an app that uses ML), write your approach as a report and submit it in a pdf form. 
+The dataset is derived from the PatchCamelyon (PCam) benchmark:
 
-Deliverable 2 — A public project GitHub repository with your work (please also include the GitHub repo URL in your notebook/report).
+- **Training images**: 220,025 patches (96×96 pixels, RGB)
+- **Test images**: 57,458 patches
+- **Labels**: Binary classification based on the central 32×32 region
+  - `0`: No tumor tissue
+  - `1`: Tumor tissue present
+- **Class distribution**: ~59.5% negative, ~40.5% positive
 
-Deliverable 3 — A screenshot of your position on the Kaggle competition leaderboard for your top-performing model.
+## Approach
 
-https://www.kaggle.com/c/histopathologic-cancer-detection/overview
+The notebook implements a custom CNN with:
+- 4 convolutional blocks (32 → 64 → 128 → 256 filters)
+- Batch normalization and dropout regularization
+- Data augmentation (flips, rotations, color jitter)
+- Adam optimizer with ReduceLROnPlateau scheduler
 
-#### AI Citation
+**Evaluation metric**: AUC-ROC
 
-- "Fix any grammatical issues with the following assignment." prompt. ChatGPT, GPT 5, OpenAI, November 15th, 2025 chat.openai.com/chat
-- "Summarize the analysis results in the given jupyter notebook." prompt. ChatGPT, GPT 5, OpenAI, November 15th, 2025 chat.openai.com/chat
+## Project Structure
+
+```
+├── notebooks/
+│   └── cancer_detection.ipynb   # EDA, training, and evaluation
+├── data/                        # Competition data (gitignored)
+│   ├── train/                   # Training images (.tif)
+│   ├── test/                    # Test images (.tif)
+│   ├── train_labels.csv
+│   └── sample_submission.csv
+└── pyproject.toml
+```
+
+## Setup
+
+```bash
+# Install dependencies
+uv sync
+
+# Start Jupyter
+uv run jupyter notebook
+```
+
+Download the competition data from Kaggle and extract to `data/`.
+
+## AI Citation
+
+- "Fix any grammatical issues with the following assignment." prompt. ChatGPT, GPT 5, OpenAI, November 25th, 2025 chat.openai.com/chat
