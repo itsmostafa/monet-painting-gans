@@ -1,6 +1,6 @@
 # Use GANS to paint like Monet
 
-**Kaggle Competition**: [https://www.kaggle.com/c/histopathologic-cancer-detection/](https://www.kaggle.com/competitions/gan-getting-started/overview)
+**Kaggle Competition**: [I’m Something of a Painter Myself](https://www.kaggle.com/competitions/gan-getting-started/overview)
 
 ## Dataset
 
@@ -9,7 +9,6 @@ TBD
 ## Approach
 
 TBD
-**Evaluation metric**: AUC-ROC
 
 ## Project Structure
 
